@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  background: white;
+}
+
+.container {
+  width: min(100% - 40px, 900px);
+  margin: 20px auto;
+}
+
+.header {
+  background: #53d5eb;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: clamp(20px, 4vw, 34px);
+  font-weight: 600;
+}
+
+.content1 {
+  display: flex;
+  gap: 10px;
+  height: 480px;
+}
+
+.c1left {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 10px;
+}
+
+.hero {
+  flex: 3;
+  background: #d9c9e4;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 18px;
+  font-size: 28px;
+}
+
+.sidebar {
+  flex: 5;
+  background: #a0c264;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 18px;
+  font-size: 28px;
+}
+
+.c1right {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  gap: 10px;
+}
+
+.main-content {
+  flex: 7;
+  background: #f6c733;
+  padding: 18px;
+  font-size: 18px;
+}
+
+.main-content .title {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.extra-content {
+  flex: 3;
+  background: #898989;
+  padding: 18px;
+  font-size: 28px;
+}
+
+.content2 {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.related-images {
+  flex: 4;
+  background: #2ab278;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.related-posts {
+  flex: 1;
+  background: #f6d8e7;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.footer {
+  background: #ffa502;
+  min-height: 70px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* Keeps the layout usable on smaller screens. */
+@media (max-width: 650px) {
+  .container {
+    width: min(100% - 20px, 900px);
+    margin: 10px auto;
+  }
+
+  .content1 {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .c1left,
+  .c1right {
+    min-height: 360px;
+  }
+
+  .content2 {
+    flex-direction: column;
+  }
+
+  .related-posts,
+  .related-images {
+    flex: none;
+  }
+}
